@@ -1,0 +1,29 @@
+{
+    "films":
+    [
+        {
+            "id":1,
+            "title":"Test1",
+            "img_url" : "https://api.lorem.space/image/movie?w=150&h=220",
+            "score":4,
+            "description" : "lorem ipsum dolor",
+            "genre":["horror","action"]
+        },
+        {
+            "id":2,
+            "title":"Test2",
+            "img_url" : "https://api.lorem.space/image/movie?w=150&h=220",
+            "score":5,
+            "description" : "lorem ipsum dolor",
+            "genre":["comedy","action"]
+        },
+        {
+            "id":3,
+            "title":"Test3",
+            "img_url" : "https://api.lorem.space/image/movie?w=150&h=220",
+            "score":2,
+            "description" : "lorem ipsum dolor",
+            "genre":["sci-fi","horror"]
+        }
+    ]
+}
