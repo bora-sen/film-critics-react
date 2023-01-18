@@ -1,5 +1,4 @@
-import FilmCard from './FilmCard/index.jsx';
-import Header from './Header/index.jsx';
-import FilmCardList from './FilmCardList/index.jsx';
-
-export {FilmCard,FilmCardList,Header}
+export { default as FilmCard} from './FilmCard';
+export { default as FilmCardList} from './FilmCardList';
+export { default as Header} from './Header';
+export { default as Footer} from './Footer';

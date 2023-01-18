@@ -1,12 +1,13 @@
 import './App.css';
-import { FilmCardList } from './components';
+import { FilmCardList, Header,Footer } from './components';
 import dataset from './dataset.json';
 
 function App() {
-  let films = dataset.films;
   return (
     <div className="container mx-auto">
-      <FilmCardList films={films}/>
+      <Header />
+      <FilmCardList movies={dataset.movies} />
+      <Footer />
     </div>
   );
 }

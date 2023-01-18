@@ -1,18 +1,30 @@
 import React from 'react'
+import { PaginatedList } from 'react-paginated-list';
 import FilmCard from '../FilmCard';
 
-function FilmCardList(films) {
-  let film_array = films.films;
+function FilmCardList({movies}) {
   return (
-    <div className='flex'>
-      {film_array.map(film => {
-        return (
-          <FilmCard key={film.id} film={film} />
-        )
-      })}
-    </div>
+
+    <PaginatedList
+    list={movies}
+    itemsPerPage={8}
+    renderList={(list) => (
+      <div className='flex p-1 flex-wrap justify-center gap-1'>
+      <>
+        {list.map((item, id) => {
+          return (
+            <FilmCard key={id} movie={item} />
+          );
+        })}
+      </>
+      </div>
+    )}
+  />
+
+
 
   )
+
 }
 
 export default FilmCardList
