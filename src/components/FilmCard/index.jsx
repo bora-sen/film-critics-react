@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function movieCard({movie}) {
 
@@ -11,10 +12,17 @@ function movieCard({movie}) {
     return images
   }
   */
+ function handleNotImage(e){
+  e.target.src = "https://user-images.githubusercontent.com/47315479/81145216-7fbd8700-8f7e-11ea-9d49-bd5fb4a888f1.png";
+ }
 
   return (
-    <div className='flex w-[10rem] sm:w-[13rem] md:w-[15rem] flex-col bg-gray-400 p-2 rounded-md hover:bg-gray-500 hover:cursor-pointer'>
-      <img className='w-full' src={movie.posterUrl} alt="Film Poster" />
+    <div className='flex w-[10rem] sm:w-[13rem] md:w-[15rem] flex-col hover:bg-gray-200 p-2 rounded-sm hover:cursor-pointer'>
+      <Link to={'/film/'+movie.id}>
+        <div className='flex items-center justify-center w-full h-[15rem]'>
+          <img onError={e => handleNotImage(e)} className='w-full h-full object-cover' src={movie.posterUrl} alt="Film Poster" />
+        </div>
+
     <div>
       <div className='flex flex-col mt-1'>
         <span className='text-xl font-title font-bold'>{movie.title}</span>
@@ -33,6 +41,7 @@ function movieCard({movie}) {
         </div>
         </div>
     </div>
+    </Link>
   </div>
   )
 }
